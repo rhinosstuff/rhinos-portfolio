@@ -15,9 +15,11 @@
     "@emotion/styled": "^11.13.0",
     "framer-motion": "^11.3.31",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1"
   },
   "devDependencies": {
+    "@chakra-ui/cli": "^2.4.1",
     "@eslint/js": "^9.9.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

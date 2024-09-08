@@ -1,15 +1,19 @@
-import { Box, Heading, Text, Button } from '@chakra-ui/react';
+import { Box, Text, Button, Heading } from '@chakra-ui/react';
+import PageTitle from '../components/UI/PageTitle';
 
 export default function AboutMe() {
   return (
     <Box p={5}>
-      <Heading as='h1' size='xl' mb={4}>
-        About Me
-      </Heading>
-      <Text fontSize='lg' mb={4}>
-        I am a passionate web developer with experience in building responsive and accessible web applications.
-      </Text>
-      <Button colorScheme='teal'>Contact Me</Button>
+      <Box>
+        <Text fontSize='lg'>
+          Hi, my name is
+        </Text>
+        <Heading>
+          Ryan Osguthorpe
+        </Heading>
+      </Box>
+      
+      <Button colorScheme='teal' mt='4' bg='my.100' color='my.800' _hover={{ bg: 'my.200', color: 'my.700' }} >Contact Me</Button>
     </Box>
   );
 }

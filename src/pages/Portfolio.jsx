@@ -1,12 +1,12 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Divider } from '@chakra-ui/react';
 import PageTitle from '../components/UI/PageTitle';
-import PortfolioCards from '../components/PortfolioDisplay';
+import ProjectCards from '../components/ProjectDisplay';
 
 export default function Portfolio() {
   return (
-    <Box p={5}>
-      <PageTitle title='Portfolio'/>
-      <PortfolioCards/>
+    <Box p={5} maxW='1200px'>
+      <PageTitle title='My Projects'/>
+      <ProjectCards/>
     </Box>
   );
 }

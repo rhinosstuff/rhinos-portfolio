@@ -1,10 +1,11 @@
 import * as React from 'react'
-import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-// Importing my CSS
+// Importing my CSS and Custom Theme
 import './App.css';
+import theme from './utils/theme';
 
 // Importing my pages
 import App from './App';
@@ -40,18 +41,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
-const colors = {
-  my: {
-    800: '#800000',
-    700: '#982B1C',
-    200: '#DAD4B5',
-    100: '#F2E8C6',
-  },
-}
-
-const theme = extendTheme({ colors })
-
 
 // Render the application with ChakraProvider and RouterProvider
 ReactDOM.createRoot(document.getElementById('root')).render(

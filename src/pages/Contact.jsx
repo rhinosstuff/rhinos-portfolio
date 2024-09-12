@@ -38,32 +38,26 @@ export default function Contact() {
 
   return (
     <>
-      <Box mt={4} p={5} maxW="600px" mx="auto" border='solid' borderRadius={10}>
-        <PageTitle title="Contact Me" />
+      <Box mt={4} p={5} maxW='600px' mx='auto' border='solid' borderRadius={10} >
+        <PageTitle title='Contact Me' />
 
         <form onSubmit={handleSubmit}>
-          <FormControl id="name" isRequired mb={4}>
+          <FormControl id='name' isRequired mb={4}>
             <FormLabel>Name</FormLabel>
-            <Input type="text" placeholder="Your name" value={formData.name} onChange={handleChange} />
+            <Input type='text' placeholder='Your name' value={formData.name} onChange={handleChange} />
           </FormControl>
 
-          <FormControl id="email" isRequired mb={4}>
+          <FormControl id='email' isRequired mb={4}>
             <FormLabel>Email</FormLabel>
-            <Input type="email" placeholder="Your email" value={formData.email} onChange={handleChange} />
+            <Input type='email' placeholder='Your email' value={formData.email} onChange={handleChange} />
           </FormControl>
 
-          <FormControl id="message" isRequired mb={4}>
+          <FormControl id='message' isRequired mb={4}>
             <FormLabel>Message</FormLabel>
-            <Textarea placeholder="Your message" value={formData.message} onChange={handleChange} />
+            <Textarea placeholder='Your message' value={formData.message} onChange={handleChange} />
           </FormControl>
 
-          <Button 
-            type="submit" 
-            variant='solid' bg='my.100' 
-            color='my.800'
-            fontSize={['sm', 'md', 'lg']} 
-            _hover={{ bg: 'my.200', color: 'my.700' }}
-          >
+          <Button type='submit' colorScheme='my'>
             Submit
           </Button>
         </form>
@@ -77,13 +71,7 @@ export default function Contact() {
             Your message has been sent successfully!
           </ModalBody>
           <ModalFooter>
-            <Button 
-              onClick={onClose}
-              variant='solid' bg='my.700'
-              color='my.100' 
-              fontSize={['sm', 'md', 'lg']}
-              _hover={{ bg: 'my.800', color: 'my.200' }}
-            >
+            <Button onClick={onClose} colorScheme='my'>
               Close
             </Button>
           </ModalFooter>

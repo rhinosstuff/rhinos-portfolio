@@ -5,7 +5,7 @@ export default function ProjectCard({ projectTitle, projectImage, projectLink, p
     <Card
       direction={{ base: 'column', md: 'row' }}
       variant='outline'
-      bgGradient='linear(to-b, my.200 0%, blue.100 50%)'
+      borderWidth={3}
       mb={6}
     >
       <Image
@@ -19,9 +19,9 @@ export default function ProjectCard({ projectTitle, projectImage, projectLink, p
 
       <Stack>
         <CardBody>
-          <Heading size='lg' color='black'>{projectTitle}</Heading>
+          <Heading size='lg'>{projectTitle}</Heading>
 
-          <Text py='3' color='black'>
+          <Text py='3'>
           This is a simple blog & comment project that requires login to make posts or comments. <br/> Feel free to give it a try by signing up.
           </Text>
         </CardBody>
@@ -32,10 +32,11 @@ export default function ProjectCard({ projectTitle, projectImage, projectLink, p
             target='_blank'
             rel='noopener noreferrer'
             href={projectLink} 
-            variant='solid' bg='my.100' 
-            color='my.800'
+            variant='solid' 
+            bg='my.200' 
+            color='my.500'
             fontSize={['sm', 'md', 'lg']} 
-            _hover={{ bg: 'my.200', color: 'my.700' }}
+            _hover={{ bg: 'my.300' }}
           >
             View Project
           </Button>
@@ -44,10 +45,11 @@ export default function ProjectCard({ projectTitle, projectImage, projectLink, p
             target='_blank'
             rel='noopener noreferrer'
             href={projectRepository} 
-            variant='solid' bg='my.700'
-            color='my.100' 
+            variant='solid' 
+            bg='my.500'
+            color='my.200' 
             fontSize={['sm', 'md', 'lg']}
-            _hover={{ bg: 'my.800', color: 'my.200' }}
+            _hover={{ bg: 'my.600' }}
             ml='3'
           >
             GitHub Repositroy

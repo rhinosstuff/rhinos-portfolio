@@ -1,23 +1,26 @@
-import { Box, Text, Button, Heading, Image } from '@chakra-ui/react';
-import PageTitle from '../components/UI/PageTitle';
+import { Box, Flex, Text, Button, Heading, Image } from '@chakra-ui/react';
+import RyanO from '../assets/images/RyanO.png'
 
 export default function AboutMe() {
   return (
-    <Box p={5}>
-      <Box>
-        <Text fontSize='lg'>
-          Hi, my name is
+    <Box p={5} mx='auto' maxW='800px'>
+      <Flex direction={{ base: 'column', md: 'row' }} >
+      <Flex direction='column' mr={{ md: 6 }} alignItems={{ base: 'flex-start'}}>
+          <Text fontSize='lg' whiteSpace='nowrap'>
+            Hi, my name is
+          </Text>
+          <Heading mb={3} whiteSpace='nowrap'>
+            Ryan Osguthorpe
+          </Heading>
+          <Image src={RyanO} height={300} objectFit='cover' alt='Ryan Osguthorpe'></Image>
+        </Flex>
+        <Text mt={{ base: 3, md: 0 }} maxW='600px' whiteSpace='normal' alignSelf='flex-end'>
+          I'm a motivated and detail-oriented entry-level programmer with a strong foundation in full-stack web development. <br/><br/> Seeking to leverage newly acquired skills in JavaScript, Node.js, React, and database management to contribute to a forward-thinking tech company. <br/><br/> Eager to apply problem-solving skills and hands-on coding experience to build efficient and scalable applications.
         </Text>
-        <Heading>
-          Ryan Osguthorpe
-        </Heading>
-        <Text mt='3'>
-          I'm an enthusiastic software engineer that loves to solve issues and streamline projects. <br/>I am currently finishing up my software engineering bootcamp (Sep 26, 2024) but I am ready to get to work now.
-        </Text>
-        <Image></Image>
-      </Box>
+        
+      </Flex>
       
-      <Button mt='4' bg='my.100' color='my.800' _hover={{ bg: 'my.200', color: 'my.700' }} >Hire Me</Button>
+      <Button as='a' href='/contact' mt='4' colorScheme='my'>Lets Connect</Button>
     </Box>
   );
 }

@@ -12,7 +12,8 @@
 
   ## Usage
   To use the app just follow the deployed link.  
-  *** **[Click Here - For Deployed Application](https://tech-blog-6pus.onrender.com/)** *** 
+  *** **[Click Here - For Deployed Application](https://rhinosstuff.netlify.app/)** ***  
+  <image src='src/assets/images/readme-pic.png' height='500px'></image> 
 
   ## License
   This project is licensed under the **[MIT](./LICENSE)** license.

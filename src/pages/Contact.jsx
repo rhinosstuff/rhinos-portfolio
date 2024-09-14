@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
   Box, FormControl, FormLabel, Input, Textarea, Button,
-  Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure
+  Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure, FormErrorMessage
 } from '@chakra-ui/react';
 import PageTitle from '../components/UI/PageTitle';
 
@@ -16,11 +16,27 @@ export default function Contact() {
     message: ''
   });
 
+  // Track whether a field has been touched (focused then blurred)
+  const [touched, setTouched] = useState({
+    name: false,
+    email: false,
+    message: false
+  });
+
   // Handle changes to form
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData(prev => ({ ...prev, [id]: value }));
   };
+
+  // Handle blur event to mark fields as touched
+  const handleBlur = (e) => {
+    const { id } = e.target;
+    setTouched(prev => ({ ...prev, [id]: true }));
+  };
+
+  // Check if the form field is empty and was touched
+  const isFieldEmpty = (field) => touched[field] && !formData[field];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,6 +50,12 @@ export default function Contact() {
       email: '',
       message: ''
     });
+    
+    setTouched({
+      name: false,
+      email: false,
+      message: false
+    });
   };
 
   return (
@@ -42,19 +64,31 @@ export default function Contact() {
         <PageTitle title='Contact Me' />
 
         <form onSubmit={handleSubmit}>
-          <FormControl id='name' isRequired mb={4}>
+          <FormControl id='name' isRequired mb={4} isInvalid={isFieldEmpty('name')}>
             <FormLabel>Name</FormLabel>
-            <Input type='text' placeholder='Your name' value={formData.name} onChange={handleChange} />
+            <Input type='text' placeholder='Your name' value={formData.name} onChange={handleChange} 
+            onBlur={handleBlur}/>
+            {isFieldEmpty('name') && (
+              <FormErrorMessage>Name is required</FormErrorMessage>
+            )}
           </FormControl>
 
-          <FormControl id='email' isRequired mb={4}>
+          <FormControl id='email' isRequired mb={4} isInvalid={isFieldEmpty('email')}>
             <FormLabel>Email</FormLabel>
-            <Input type='email' placeholder='Your email' value={formData.email} onChange={handleChange} />
+            <Input type='email' placeholder='Your email' value={formData.email} onChange={handleChange} 
+            onBlur={handleBlur}/>
+            {isFieldEmpty('email') && (
+              <FormErrorMessage>Email is required</FormErrorMessage>
+            )}
           </FormControl>
 
-          <FormControl id='message' isRequired mb={4}>
+          <FormControl id='message' isRequired mb={4} isInvalid={isFieldEmpty('message')}>
             <FormLabel>Message</FormLabel>
-            <Textarea placeholder='Your message' value={formData.message} onChange={handleChange} />
+            <Textarea placeholder='Your message' value={formData.message} onChange={handleChange} 
+            onBlur={handleBlur}/>
+            {isFieldEmpty('message') && (
+              <FormErrorMessage>Message is required</FormErrorMessage>
+            )}
           </FormControl>
 
           <Button type='submit' colorScheme='my'>

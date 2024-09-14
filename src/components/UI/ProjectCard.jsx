@@ -1,6 +1,6 @@
 import { Image, Text, Card, CardBody, CardFooter, Stack, Heading, Button  } from '@chakra-ui/react';
 
-export default function ProjectCard({ projectTitle, projectImage, projectLink, projectRepository }) {
+export default function ProjectCard({ projectTitle, projectImage, projectDescription, projectLink, projectRepository }) {
   return (
     <Card
       direction={{ base: 'column', md: 'row' }}
@@ -20,10 +20,7 @@ export default function ProjectCard({ projectTitle, projectImage, projectLink, p
       <Stack>
         <CardBody>
           <Heading size='lg'>{projectTitle}</Heading>
-
-          <Text py='3'>
-          This is a simple blog & comment project that requires login to make posts or comments. <br/> Feel free to give it a try by signing up.
-          </Text>
+          <Text py='3'>{projectDescription}</Text>
         </CardBody>
 
         <CardFooter>

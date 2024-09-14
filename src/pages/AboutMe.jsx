@@ -1,5 +1,5 @@
 import { Box, Flex, Text, Button, Heading, Image } from '@chakra-ui/react';
-import RyanO from '../assets/images/RyanO.png'
+import RyanO from '../assets/images/ryan-osguthorpe.png'
 
 export default function AboutMe() {
   return (

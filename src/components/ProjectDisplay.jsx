@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import ProjectCard from './UI/ProjectCard'
 import StockNessMonster from '../assets/images/stock-ness-monster.png'
-import TechBlog from '../assets/images/tech-blog.png'
+// import TechBlog from '../assets/images/tech-blog.png'
 import WeatherDashboard from '../assets/images/weather-dashboard.png'
 import BookFinder from '../assets/images/book-finder.png'
 import TaskBoard from '../assets/images/task-board.png'
@@ -27,7 +27,7 @@ export default function ProjectCards() {
       />
       <ProjectCard
         projectTitle='Tech Blog'
-        projectImage={TechBlog}
+        // projectImage={TechBlog}
         projectDescription={
         <>
           Welcome to The Tech Bolg! Post your own blogs or comment on other user blogs. Just please be kind and thoughful. This blog & comment project requires authentication to make posts or comments. Once you signup you can comment, post, edit or delete your bolgs.<br /><br />

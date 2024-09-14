@@ -51,6 +51,7 @@ export default function Contact() {
       message: ''
     });
     
+    // Reset if touched
     setTouched({
       name: false,
       email: false,

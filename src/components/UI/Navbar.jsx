@@ -1,21 +1,11 @@
-import { Box, Heading, Flex, UnorderedList, ListItem, useColorMode, IconButton, Image, keyframes } from '@chakra-ui/react';
+import { Box, Heading, Flex, UnorderedList, ListItem, useColorMode, IconButton, Image } from '@chakra-ui/react';
+import { spin, scale } from './Animations';
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 
 import RhinoLogo from '../../assets/images/rhino.svg';
 
 export default function Navbar({ links }) {
   const { colorMode, toggleColorMode } = useColorMode();
-
-  const spin = keyframes`
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  `;
-
-  // Scale animation
-  const scale = keyframes`
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-  `;
 
   return (
     <Box as='nav' bgGradient='linear(to-b, my.300 0%, my.500 65%, my.600 150%)' p={4}>
@@ -24,7 +14,7 @@ export default function Navbar({ links }) {
           <Heading as='h1' size='xl' fontWeight='bold' color='my.300'>
             rhinosstuff
           </Heading>
-          <Image src={RhinoLogo} alt='Rhino Logo' boxSize='50px' transform="scaleX(-1)" ml={3} mt={2} />
+          <Image src={RhinoLogo} alt='Rhino Logo' boxSize='50px' transform="scaleX(-1)" ml={3} />
           <IconButton
             aria-label='Toggle color mode'
             onClick={toggleColorMode}

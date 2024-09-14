@@ -10,11 +10,11 @@ export default function Nav() {
 
   // Custom CSS for hover and active tab
   const linkStyles = (path) => ({
-    color: isActive(path) ? 'my.100' : 'my.200',
+    color: isActive(path) ? 'my.200' : 'my.300',
     fontWeight: isActive(path) ? 'bold' : 'normal',
     _hover: {
       textDecoration: 'none',
-      color: 'my.100',
+      color: 'my.200',
     },
   });
 

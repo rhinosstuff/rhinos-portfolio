@@ -12,8 +12,8 @@ export default function ErrorPage() {
       p={4}
     >
       <Box
-        bg='#982B1C'
-        color='#F2E8C6'
+        bg='my.500'
+        color='my.200'
         p={6}
         borderRadius='md'
         boxShadow='md'

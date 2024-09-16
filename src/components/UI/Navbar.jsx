@@ -1,6 +1,6 @@
 import { Box, Heading, Flex, UnorderedList, ListItem, useColorMode, IconButton, Image } from '@chakra-ui/react';
 import { spin, scale } from './Animations';
-import { IoMdMoon, IoMdSunny } from "react-icons/io";
+import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 
 import RhinoLogo from '../../assets/images/rhino.svg';
 
@@ -14,11 +14,11 @@ export default function Navbar({ links }) {
           <Heading as='h1' size='xl' fontWeight='bold' color='my.300'>
             rhinosstuff
           </Heading>
-          <Image src={RhinoLogo} alt='Rhino Logo' boxSize='50px' transform="scaleX(-1)" ml={3} />
+          <Image src={RhinoLogo} alt='Rhino Logo' boxSize='50px' transform='scaleX(-1)' ml={3} />
           <IconButton
             aria-label='Toggle color mode'
             onClick={toggleColorMode}
-            icon={colorMode === 'light' ? <IoMdMoon transform="scaleX(-1)" /> : <IoMdSunny />}
+            icon={colorMode === 'light' ? <IoMdMoon transform='scaleX(-1)' /> : <IoMdSunny />}
             variant='ghost'
             color={colorMode === 'light' ? 'gray.300' : 'yellow.400'} 
             _hover={{

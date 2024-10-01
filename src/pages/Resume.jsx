@@ -1,7 +1,7 @@
 import { Box, Button } from '@chakra-ui/react';
 import { DownloadIcon } from '@chakra-ui/icons';
 import PageTitle from '../components/UI/PageTitle';
-import ResumePDF from '../assets/RyanO_Resume.pdf';
+import ResumePDF from '../assets/RyanResume.pdf';
 
 export default function Resume() {
   return (
